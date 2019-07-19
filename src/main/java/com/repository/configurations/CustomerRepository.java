@@ -8,4 +8,5 @@ import com.repository.model.Customer;
 @Repository
 public interface CustomerRepository extends MongoRepository<Customer, Integer>{
 
+	Customer findByCustomerId(String customerId);
 }

@@ -1,5 +1,8 @@
 package com.repository.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CustomersCategory {
 	
 	private String type;

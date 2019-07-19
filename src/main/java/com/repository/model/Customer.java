@@ -1,28 +1,35 @@
 package com.repository.model;
 
-import org.springframework.data.annotation.Id;
+import javax.annotation.Generated;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Customer {
 	
-	private int customerId;
-	private CustomersCategory customersCategory;
-	public int getUserId() {
+	
+	
+
+	
+	private String customerId=new ObjectId().toString();
+	public String getCustomerId() {
 		return customerId;
 	}
-	public void setUserId(int customerId) {
-		this.customerId = customerId;
+	public void setCustomerId(ObjectId customerId) {
+	
 	}
+	@NotNull
+	private CustomersCategory customersCategory;
 	public CustomersCategory getCustomersCategory() {
 		return customersCategory;
 	}
-	public void setCustomersCategory(CustomersCategory scustomersCategory) {
+	public void setCustomersCategory(CustomersCategory customersCategory) {
 		this.customersCategory = customersCategory;
 	}
-	public Customer() {
-		super();
-	}
+	
 	
 	
 }
